@@ -3,57 +3,101 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Embedded Software Engineering — Duality Lab, Purdue University</title>
-<meta name="description" content="How can analysis, assurance, and systems techniques make strong correctness guarantees practical for embedded and safety-sensitive software under real resource constraints?">
+<title>Embedded Software Engineering — James Davis, Purdue University</title>
+<meta name="description" content="How can analysis and assurance become practical for embedded software?">
 <link rel="canonical" href="https://davisjam.github.io/embedded-software-engineering/">
 <meta property="og:title" content="Embedded Software Engineering">
-<meta property="og:description" content="How can analysis, assurance, and systems techniques make strong correctness guarantees practical for embedded and safety-sensitive software under real resource constraints?">
+<meta property="og:description" content="How can analysis and assurance become practical for embedded software?">
 <meta property="og:url" content="https://davisjam.github.io/embedded-software-engineering/">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <div class="wrap">
-
-<header class="site">
-  <p class="kicker">A research programme of the Duality Lab</p>
-  <h1>Embedded Software Engineering</h1>
-  <p class="thesis">How can analysis, assurance, and systems techniques make strong correctness guarantees practical for embedded and safety-sensitive software under real resource constraints?</p>
+<header class="masthead">
+  <div class="who"><a href="https://davisjam.github.io/">James Davis, PhD</a></div>
+  <div class="role">Assistant Professor, Elmore Family School of Electrical and Computer
+    Engineering, Purdue University</div>
+  <nav><a href="https://davisjam.github.io/">Home</a><a href="https://davisjam.github.io/research/" aria-current="page">Research</a><a href="https://davisjam.github.io/publications/">Publications</a><a href="https://davisjam.github.io/teaching/">Teaching</a><a href="https://davisjam.github.io/service/">Service</a><a href="https://davisjam.github.io/about/">About me</a></nav>
 </header>
-
-<figure class="hero">
-  <img src="figures/research-lineage.svg" alt="Unit Proofing is the culmination of a sustained lineage, not a disconnected new brand.">
-  <figcaption>Unit Proofing is the culmination of a sustained lineage, not a disconnected new brand.</figcaption>
-</figure>
-<h2>Selected research</h2>
-<div class="pub"><div class="t">Do Unit Proofs Work? An Empirical Study of Compositional Bounded Model Checking for Memory Safety Verification</div><div class="meta">Proceedings of the 48th IEEE/ACM International Conference on Software Engineering (ICSE) · 2026</div></div>
-<div class="pub"><div class="t">Lessons from Mitigating False Positives in Google&#x27;s OSS-Fuzz-Gen</div><div class="meta">ACM International Conference on the Foundations of Software Engineering -- Industry track (FSE-Industry) · 2026</div></div>
-<div class="pub"><div class="t">LEMIX: Enabling Testing of Embedded Applications as Linux Applications</div><div class="meta">Proceedings of the 34th USENIX Security Symposium (SECURITY) · 2025</div><div class="links"><a href="https://zenodo.org/records/15611391">Artifact</a><a href="https://davisjam.medium.com/lemix-enabling-testing-of-embedded-applications-as-linux-applications-895f85131cd8">Blog</a></div></div>
-<div class="pub"><div class="t">Usage and Effectiveness of Static Analysis in Open-Source Embedded Software: CodeQL Finds Hundreds of Defects</div><div class="meta">Proceedings of the 34th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA) · 2025</div><div class="links"><a href="https://github.com/purs3lab/ISSTA-2025-EMBOSS-Artifact">Artifact</a></div></div>
-<div class="pub"><div class="t">A Unit Proofing Framework for Code-level Verification: A Research Agenda</div><div class="meta">Proceedings of the 47th IEEE/ACM International Conference on Software Engineering - New Ideas and Emerging Results Track (ICSE-NIER) · 2025</div></div>
-<div class="pub"><div class="t">Reactive Bottom-Up Testing</div><div class="meta">arXiv · 2025</div></div>
-<div class="pub"><div class="t">Systematically Detecting Packet Validation Vulnerabilities in Embedded Network Stacks</div><div class="meta">Proceedings of the 38th IEEE/ACM International Conference on Automated Software Engineering (ASE) · 2023</div><div class="links"><a href="https://doi.org/10.5281/zenodo.8247917">Artifact</a><a href="https://davisjam.medium.com/systematically-detecting-packet-validation-vulnerabilities-in-embedded-network-stacks-4a9954ff393d">Blog</a></div></div>
-<div class="pub"><div class="t">Towards Rehosting Embedded Applications as Linux Applications</div><div class="meta">Proceedings of the 53rd Annual IEEE/IFIP International Conference on Dependable Systems and Networks — Disrupt track (DSN-Disrupt) · 2023</div></div>
-<div class="pub"><div class="t">Towards Automated Identification of Layering Violations in Embedded Applications (WIP)</div><div class="meta">Proceedings of the 24th ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES) · 2023</div></div>
-<div class="pub"><div class="t">AutoSOUP: Safety-Oriented Unit Proof Generation for Component-level Memory-Safety Verification</div></div>
-<h2>Funding and support</h2>
-<ul class='funding'>
-<li><strong>Rolls-Royce</strong> (2025&ndash;2026)<br>Securing Software Implementations through System Fuzz Testing and Modular Formal Methods</li>
-<li><strong>Qualcomm, Inc.</strong> (2025&ndash;2026)<br>Qualcomm Innovation Fellowship</li>
-<li><strong>OpenAI — Cybersecurity Grant Program</strong> (2025)<br>AutoUP: Automated Unit Proofing</li>
-<li><strong>Rolls-Royce</strong> (2024&ndash;2025)<br>Facilitating Effective Dynamic Analysis of Embedded Software</li>
-<li><strong>Rolls-Royce</strong> (2023&ndash;2024)<br>Dynamic Security Analysis of Embedded Software Systems</li>
-<li><strong>Rolls-Royce</strong> (2021&ndash;2022)<br>Dynamic Analysis of Embedded Firmware</li>
-</ul>
-
+<h1>Embedded Software Engineering</h1>
+<p class="lede">How can analysis and assurance become practical for embedded software?</p>
+<p>Embedded software runs where failures are expensive, and in conditions that defeat the assumptions most analysis tools are built on: no operating system to speak of, hardware that the analysis cannot reach, and code that cannot simply be run in a test harness.</p>
+<p>Our work has attacked that gap in stages. We studied defects in real embedded network stacks, built rehosting infrastructure so firmware can execute away from its target hardware, and applied static analysis at a scale where it finds hundreds of defects across many projects. A current thrust, Unit Proofing, asks whether component-level formal verification can be made cheap enough to use as an ordinary engineering step rather than a special occasion.</p>
+<nav class="jump"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#support">Funding and support</a></nav>
+<h2 id="research">Research</h2>
+<div class="split">
+  <div></div>
+  <figure>
+    <img src="figures/research-lineage.svg" alt="Each stage established what the next one needed. Unit Proofing sits at the end of that line rather than beside it.">
+    <figcaption>Each stage established what the next one needed. Unit Proofing sits at the end of that line rather than beside it.</figcaption>
+  </figure>
+</div>
+<h2 id="publications">Publications</h2>
+<div class="bib">
+<div class="yr">2026</div>
+<div class="e">
+<div class="ti">Do Unit Proofs Work? An Empirical Study of Compositional Bounded Model Checking for Memory Safety Verification</div>
+<div class="vn">Proceedings of the 48th IEEE/ACM International Conference on Software Engineering (ICSE)</div>
+</div>
+<div class="e">
+<div class="ti">Lessons from Mitigating False Positives in Google&#x27;s OSS-Fuzz-Gen</div>
+<div class="vn">ACM International Conference on the Foundations of Software Engineering -- Industry track (FSE-Industry)</div>
+</div>
+<div class="yr">2025</div>
+<div class="e">
+<div class="ti">LEMIX: Enabling Testing of Embedded Applications as Linux Applications</div>
+<div class="vn">Proceedings of the 34th USENIX Security Symposium (SECURITY)</div>
+<div class="ln"><a href="https://zenodo.org/records/15611391">Artifact</a><a href="https://davisjam.medium.com/lemix-enabling-testing-of-embedded-applications-as-linux-applications-895f85131cd8">Blog</a></div>
+</div>
+<div class="e">
+<div class="ti">Usage and Effectiveness of Static Analysis in Open-Source Embedded Software: CodeQL Finds Hundreds of Defects</div>
+<div class="vn">Proceedings of the 34th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)</div>
+<div class="ln"><a href="https://github.com/purs3lab/ISSTA-2025-EMBOSS-Artifact">Artifact</a></div>
+</div>
+<div class="e">
+<div class="ti">A Unit Proofing Framework for Code-level Verification: A Research Agenda</div>
+<div class="vn">Proceedings of the 47th IEEE/ACM International Conference on Software Engineering - New Ideas and Emerging Results Track (ICSE-NIER)</div>
+</div>
+<div class="e">
+<div class="ti">Reactive Bottom-Up Testing</div>
+<div class="vn">arXiv</div>
+</div>
+<div class="yr">2023</div>
+<div class="e">
+<div class="ti">Systematically Detecting Packet Validation Vulnerabilities in Embedded Network Stacks</div>
+<div class="vn">Proceedings of the 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)</div>
+<div class="ln"><a href="https://doi.org/10.5281/zenodo.8247917">Artifact</a><a href="https://davisjam.medium.com/systematically-detecting-packet-validation-vulnerabilities-in-embedded-network-stacks-4a9954ff393d">Blog</a></div>
+</div>
+<div class="e">
+<div class="ti">Towards Rehosting Embedded Applications as Linux Applications</div>
+<div class="vn">Proceedings of the 53rd Annual IEEE/IFIP International Conference on Dependable Systems and Networks — Disrupt track (DSN-Disrupt)</div>
+</div>
+<div class="e">
+<div class="ti">Towards Automated Identification of Layering Violations in Embedded Applications (WIP)</div>
+<div class="vn">Proceedings of the 24th ACM SIGPLAN/SIGBED International Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</div>
+</div>
+<div class="yr">In preparation</div>
+<div class="e">
+<div class="ti">AutoSOUP: Safety-Oriented Unit Proof Generation for Component-level Memory-Safety Verification</div>
+</div>
+</div>
+<h2 id="support">Funding and support</h2>
+<p>This work has been supported by:</p>
+<dl class="support">
+<dt>Rolls-Royce</dt><dd>Securing Software Implementations through System Fuzz Testing and Modular Formal Methods</dd>
+<dt>Qualcomm, Inc.</dt><dd>Qualcomm Innovation Fellowship</dd>
+<dt>OpenAI — Cybersecurity Grant Program</dt><dd>AutoUP: Automated Unit Proofing</dd>
+<dt>Rolls-Royce</dt><dd>Facilitating Effective Dynamic Analysis of Embedded Software</dd>
+<dt>Rolls-Royce</dt><dd>Dynamic Security Analysis of Embedded Software Systems</dd>
+<dt>Rolls-Royce</dt><dd>Dynamic Analysis of Embedded Firmware</dd>
+</dl>
 <footer class="site">
-  <p>A research project of <a href="https://davisjam.github.io/">James C. Davis</a> ·
-     Duality Lab · Purdue University</p>
-  <p><a href="https://davisjam.github.io/">Research portfolio</a> ·
+  <p><a href="https://davisjam.github.io/research/">&larr; All research</a></p>
+  <p><a href="https://davisjam.github.io/">James Davis</a> ·
      <a href="https://davisjam.github.io/publications/">Publications</a> ·
-     <a href="https://github.com/davisjam/embedded-software-engineering">Repository</a></p>
+     <a href="https://davisjam.github.io/teaching/">Teaching</a></p>
 </footer>
-
 </div>
 </body>
 </html>
