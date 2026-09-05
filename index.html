@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Embedded Software Engineering — James Davis, Purdue University</title>
+<title>Embedded Software Engineering &middot; Duality Lab</title>
 <meta name="description" content="How can analysis and assurance become practical for embedded software?">
+<meta name="author" content="James C. Davis">
 <link rel="canonical" href="https://davisjam.github.io/embedded-software-engineering/">
 <meta property="og:title" content="Embedded Software Engineering">
 <meta property="og:description" content="How can analysis and assurance become practical for embedded software?">
@@ -13,13 +14,21 @@
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<div class="wrap">
 <header class="masthead">
-  <div class="who"><a href="https://davisjam.github.io/">James Davis, PhD</a></div>
-  <div class="role">Assistant Professor, Elmore Family School of Electrical and Computer
-    Engineering, Purdue University</div>
-  <nav><a href="https://davisjam.github.io/">Home</a><a href="https://davisjam.github.io/research/" aria-current="page">Research</a><a href="https://davisjam.github.io/publications/">Publications</a><a href="https://davisjam.github.io/teaching/">Teaching</a><a href="https://davisjam.github.io/service/">Service</a><a href="https://davisjam.github.io/about/">About me</a></nav>
+  <div class="masthead__inner">
+    <a class="masthead__logo" href="https://davisjam.github.io/">
+      <img src="assets/logo-v2.png" alt="Duality Lab"></a>
+    <nav><a href="https://davisjam.github.io/">Home</a><span class="crumb"><a href="https://davisjam.github.io/research/">Research</a><span class="sep">&rsaquo;</span><span class="here">Embedded SE</span></span><a href="https://davisjam.github.io/publications/">Publications</a><a href="https://davisjam.github.io/teaching/">Teaching</a><a href="https://davisjam.github.io/service/">Service</a><a href="https://davisjam.github.io/about/">About</a></nav>
+  </div>
 </header>
+<div class="shell">
+<aside class="rail">
+  <img class="avatar" src="assets/JamesDavis.jpg" alt="James Davis">
+  <p class="name">James Davis, PhD</p>
+  <p class="role">Assistant Professor,<br>ECE&#64;Purdue</p>
+  <ul><li><a href="mailto:davisjam@purdue.edu">Email</a></li><li><a href="https://scholar.google.com/citations?user=iVjLBTsAAAAJ">Google Scholar</a></li><li><a href="https://github.com/davisjam">GitHub</a></li><li><a href="https://davisjam.github.io/files/JamesDavis-CV.pdf">CV</a></li></ul>
+</aside>
+<main class="main">
 <h1>Embedded Software Engineering</h1>
 <p class="lede">How can analysis and assurance become practical for embedded software?</p>
 <p>Embedded software runs where failures are expensive, and in conditions that defeat the assumptions most analysis tools are built on: no operating system to speak of, hardware that the analysis cannot reach, and code that cannot simply be run in a test harness.</p>
@@ -40,41 +49,45 @@
 <div class="ti">Do Unit Proofs Work? An Empirical Study of Compositional Bounded Model Checking for Memory Safety Verification</div>
 <div class="vn">Proceedings of the 48th IEEE/ACM International Conference on Software Engineering (ICSE)</div>
 <div class="note">Asked whether unit proofs work rather than assuming they do, and measured compositional bounded model checking for memory safety on real code.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2503.13762">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">Lessons from Mitigating False Positives in Google&#x27;s OSS-Fuzz-Gen</div>
 <div class="vn">ACM International Conference on the Foundations of Software Engineering -- Industry track (FSE-Industry)</div>
 <div class="note">False positives are what make automated fuzz-driver generation unusable in practice; this reports what reducing them took inside Google&#x27;s OSS-Fuzz-Gen.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2510.02185">Paper</a></div>
 </div>
 <div class="yr">2025</div>
 <div class="e">
 <div class="ti">LEMIX: Enabling Testing of Embedded Applications as Linux Applications</div>
 <div class="vn">Proceedings of the 34th USENIX Security Symposium (SECURITY)</div>
 <div class="note">LEMIX made that rehosting practical: embedded applications become testable as Linux applications, removing the fidelity-versus-effort tradeoff earlier approaches were stuck with.</div>
-<div class="ln"><a href="https://zenodo.org/records/15611391">Artifact</a><a href="https://davisjam.medium.com/lemix-enabling-testing-of-embedded-applications-as-linux-applications-895f85131cd8">Blog</a></div>
+<div class="ln"><a href="https://zenodo.org/records/15611391">Artifact</a><a href="https://davisjam.medium.com/lemix-enabling-testing-of-embedded-applications-as-linux-applications-895f85131cd8">Blog</a><a href="https://arxiv.org/pdf/2503.17588">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">Usage and Effectiveness of Static Analysis in Open-Source Embedded Software: CodeQL Finds Hundreds of Defects</div>
 <div class="vn">Proceedings of the 34th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)</div>
 <div class="note">Applied static analysis across many open-source embedded projects and found hundreds of defects, showing that analysis at ecosystem scale is affordable and that projects were not already doing it.</div>
-<div class="ln"><a href="https://github.com/purs3lab/ISSTA-2025-EMBOSS-Artifact">Artifact</a></div>
+<div class="ln"><a href="https://github.com/purs3lab/ISSTA-2025-EMBOSS-Artifact">Artifact</a><a href="https://arxiv.org/pdf/2310.00205">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">A Unit Proofing Framework for Code-level Verification: A Research Agenda</div>
 <div class="vn">Proceedings of the 47th IEEE/ACM International Conference on Software Engineering - New Ideas and Emerging Results Track (ICSE-NIER)</div>
 <div class="note">Sets out the Unit Proofing agenda: design-level verification does not expose implementation defects, so verification has to reach the code.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2410.14818">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">Reactive Bottom-Up Testing</div>
 <div class="vn">arXiv</div>
 <div class="note">Reactive bottom-up testing: reaching deep code by building tests upward from the units rather than driving from the top.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2509.03711">Paper</a></div>
 </div>
 <div class="yr">2023</div>
 <div class="e">
 <div class="ti">Systematically Detecting Packet Validation Vulnerabilities in Embedded Network Stacks</div>
 <div class="vn">Proceedings of the 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)</div>
 <div class="note">Found high-severity defects in the network stacks that low-resource devices depend on, and showed the defects were systematic enough to look for deliberately. The empirical start of the line.</div>
-<div class="ln"><a href="https://doi.org/10.5281/zenodo.8247917">Artifact</a><a href="https://davisjam.medium.com/systematically-detecting-packet-validation-vulnerabilities-in-embedded-network-stacks-4a9954ff393d">Blog</a></div>
+<div class="ln"><a href="https://doi.org/10.5281/zenodo.8247917">Artifact</a><a href="https://davisjam.medium.com/systematically-detecting-packet-validation-vulnerabilities-in-embedded-network-stacks-4a9954ff393d">Blog</a><a href="https://arxiv.org/pdf/2308.10965">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">Towards Rehosting Embedded Applications as Linux Applications</div>
@@ -102,12 +115,12 @@
 <dt>Rolls-Royce</dt><dd>Dynamic Security Analysis of Embedded Software Systems</dd>
 <dt>Rolls-Royce</dt><dd>Dynamic Analysis of Embedded Firmware</dd>
 </dl>
+</main>
+</div>
 <footer class="site">
   <p><a href="https://davisjam.github.io/research/">&larr; All research</a></p>
-  <p><a href="https://davisjam.github.io/">James Davis</a> ·
-     <a href="https://davisjam.github.io/publications/">Publications</a> ·
-     <a href="https://davisjam.github.io/teaching/">Teaching</a></p>
+  <p>Duality Lab &middot; Elmore Family School of Electrical and Computer
+     Engineering &middot; Purdue University</p>
 </footer>
-</div>
 </body>
 </html>
